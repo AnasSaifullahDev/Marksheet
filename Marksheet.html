@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>Mark Sheet</title>
+</head>
+</body>
+<script>
+    let nam = prompt("Type Your Name");
+    let fname = prompt("Type Your Father Name");
+    let clas = prompt("Type Your Class Name");
+    let rollNo = prompt("Type Your Roll Number");
+    let phy = Number(prompt("Type Your Physic Number"));
+    let mth = Number(prompt("Type Your Maths Number"));
+    let eng = Number(prompt("Type Your English Number"));
+    let urd = Number(prompt("Type Your Urdu Number"));
+    let pst = Number(prompt("Type Your Pakistan Studies Number"));
+    let cmp = Number(prompt("Type Your Computer Number"));
+    
+    // Physics Grading
+    
+    let pyr;
+    let pys;
+    let pybg;
+    let pyc;
+    
+    if (phy > 100) {
+        pyr = "ERROR!";
+        pys = "ERROR!";
+        pybg = "#f00000";
+        pyc = "#ffffff";
+    } else if (phy >= 95) {
+        pyr = "A++";
+        pys = "Exceptional";
+        pybg = "#143601";
+        pyc = "#ffffff";
+    } else if (phy >= 90) {
+        pyr = "A+";
+        pys = "Outstanding";
+        pybg = "#1a4301";
+        pyc = "#ffffff";
+    } else if (phy >= 85) {
+        pyr = "A";
+        pys = "Excellent";
+        pybg = "#245501";
+        pyc = "#ffffff";
+    } else if (phy >= 80) {
+        pyr = "B++";
+        pys = "Very Good";
+        pybg = "#538d22";
+        pyc = "#ffffff";
+    } else if (phy >= 75) {
+        pyr = "B+";
+        pys = "Good";
+        pybg = "#73a942";
+        pyc = "#000000";
+    } else if (phy >= 70) {
+        pyr = "B";
+        pys = "Fairly Good";
+        pybg = "#aad576";
+        pyc = "#000000";
+    } else if (phy >= 60) {
+        pyr = "C";
+        pys = "Above Average";
+        pybg = "#edc531";
+        pyc = "#000000";
+    } else if (phy >= 50) {
+        pyr = "D";
+        pys = "Average";
+        pybg = "#fad643";
+        pyc = "#000000";
+    } else if (phy >= 40) {
+        pyr = "E";
+        pys = "Below Average";
+        pybg = "#ffe169";
+        pyc = "#000000";
+    } else {
+        pyr = "U";
+        pys = "Unsatisfactory";
+        pybg = "#5c0000";
+        pyc = "#ffffff";
+    }
+    
+    // Maths Grading
+    
+    let mhr;
+    let mhs;
+    let mhbg;
+    let mhc;
+    
+    if (mth > 100) {
+        mhr = "ERROR!";
+        mhs = "ERROR!";
+        mhbg = "#f00000";
+        mhc = "#ffffff";
+    } else if (mth >= 95) {
+        mhr = "A++";
+        mhs = "Exceptional";
+        mhbg = "#143601";
+        mhc = "#ffffff";
+    } else if (mth >= 90) {
+        mhr = "A+";
+        mhs = "Outstanding";
+        mhbg = "#1a4301";
+        mhc = "#ffffff";
+    } else if (mth >= 85) {
+        mhr = "A";
+        mhs = "Excellent";
+        mhbg = "#245501";
+        mhc = "#ffffff";
+    } else if (mth >= 80) {
+        mhr = "B++";
+        mhs = "Very Good";
+        mhbg = "#538d22";
+        mhc = "#ffffff";
+    } else if (mth >= 75) {
+        mhr = "B+";
+        mhs = "Good";
+        mhbg = "#73a942";
+        mhc = "#000000";
+    } else if (mth >= 70) {
+        mhr = "B";
+        mhs = "Fairly Good";
+        mhbg = "#aad576";
+        mhc = "#000000";
+    } else if (mth >= 60) {
+        mhr = "C";
+        mhs = "Above Average";
+        mhbg = "#edc531";
+        mhc = "#000000";
+    } else if (mth >= 50) {
+        mhr = "D";
+        mhs = "Average";
+        mhbg = "#fad643";
+        mhc = "#000000";
+    } else if (mth >= 40) {
+        mhr = "E";
+        mhs = "Below Average";
+        mhbg = "#ffe169";
+        mhc = "#000000";
+    } else {
+        mhr = "U";
+        mhs = "Unsatisfactory";
+        mhbg = "#5c0000";
+        mhc = "#ffffff";
+    }
+    
+    // English Grading
+    
+    let egr;
+    let egs;
+    let egbg;
+    let egc;
+    
+    if (eng > 100) {
+        egr = "ERROR!";
+        egs = "ERROR!";
+        egbg = "#f00000";
+        egc = "#ffffff";
+    } else if (eng >= 95) {
+        egr = "A++";
+        egs = "Exceptional";
+        egbg = "#143601";
+        egc = "#ffffff";
+    } else if (eng >= 90) {
+        egr = "A+";
+        egs = "Outstanding";
+        egbg = "#1a4301";
+        egc = "#ffffff";
+    } else if (eng >= 85) {
+        egr = "A";
+        egs = "Excellent";
+        egbg = "#245501";
+        egc = "#ffffff";
+    } else if (eng >= 80) {
+        egr = "B++";
+        egs = "Very Good";
+        egbg = "#538d22";
+        egc = "#ffffff";
+    } else if (eng >= 75) {
+        egr = "B+";
+        egs = "Good";
+        egbg = "#73a942";
+        egc = "#000000";
+    } else if (eng >= 70) {
+        egr = "B";
+        egs = "Fairly Good";
+        egbg = "#aad576";
+        egc = "#000000";
+    } else if (eng >= 60) {
+        egr = "C";
+        egs = "Above Average";
+        egbg = "#edc531";
+        egc = "#000000";
+    } else if (eng >= 50) {
+        egr = "D";
+        egs = "Average";
+        egbg = "#fad643";
+        egc = "#000000";
+    } else if (eng >= 40) {
+        egr = "E";
+        egs = "Below Average";
+        egbg = "#ffe169";
+        egc = "#000000";
+    } else {
+        egr = "U";
+        egs = "Unsatisfactory";
+        egbg = "#5c0000";
+        egc = "#ffffff";
+    }
+    
+    // Urdu Grading
+    
+    let udr;
+    let uds;
+    let udbg;
+    let udc;
+    
+    if (urd > 100) {
+        udr = "ERROR!";
+        uds = "ERROR!";
+        udbg = "#f00000";
+        udc = "#ffffff";
+    } else if (urd >= 95) {
+        udr = "A++";
+        uds = "Exceptional";
+        udbg = "#143601";
+        udc = "#ffffff";
+    } else if (urd >= 90) {
+        udr = "A+";
+        uds = "Outstanding";
+        udbg = "#1a4301";
+        udc = "#ffffff";
+    } else if (urd >= 85) {
+        udr = "A";
+        uds = "Excellent";
+        udbg = "#245501";
+        udc = "#ffffff";
+    } else if (urd >= 80) {
+        udr = "B++";
+        uds = "Very Good";
+        udbg = "#538d22";
+        udc = "#ffffff";
+    } else if (urd >= 75) {
+        udr = "B+";
+        uds = "Good";
+        udbg = "#73a942";
+        udc = "#000000";
+    } else if (urd >= 70) {
+        udr = "B";
+        uds = "Fairly Good";
+        udbg = "#aad576";
+        udc = "#000000";
+    } else if (urd >= 60) {
+        udr = "C";
+        uds = "Above Average";
+        udbg = "#edc531";
+        udc = "#000000";
+    } else if (urd >= 50) {
+        udr = "D";
+        uds = "Average";
+        udbg = "#fad643";
+        udc = "#000000";
+    } else if (urd >= 40) {
+        udr = "E";
+        uds = "Below Average";
+        udbg = "#ffe169";
+        udc = "#000000";
+    } else {
+        udr = "U";
+        uds = "Unsatisfactory";
+        udbg = "#5c0000";
+        udc = "#ffffff";
+    }
+    
+    // Pakistan Studies Grading
+    
+    let ptr;
+    let pts;
+    let ptbg;
+    let ptc;
+    
+    if (pst > 100) {
+        ptr = "ERROR!";
+        pts = "ERROR!";
+        ptbg = "#f00000";
+        ptc = "#ffffff";
+    } else if (pst >= 95) {
+        ptr = "A++";
+        pts = "Exceptional";
+        ptbg = "#143601";
+        ptc = "#ffffff";
+    } else if (pst >= 90) {
+        ptr = "A+";
+        pts = "Outstanding";
+        ptbg = "#1a4301";
+        ptc = "#ffffff";
+    } else if (pst >= 85) {
+        ptr = "A";
+        pts = "Excellent";
+        ptbg = "#245501";
+        ptc = "#ffffff";
+    } else if (pst >= 80) {
+        ptr = "B++";
+        pts = "Very Good";
+        ptbg = "#538d22";
+        ptc = "#ffffff";
+    } else if (pst >= 75) {
+        ptr = "B+";
+        pts = "Good";
+        ptbg = "#73a942";
+        ptc = "#000000";
+    } else if (pst >= 70) {
+        ptr = "B";
+        pts = "Fairly Good";
+        ptbg = "#aad576";
+        ptc = "#000000";
+    } else if (pst >= 60) {
+        ptr = "C";
+        pts = "Above Average";
+        ptbg = "#edc531";
+        ptc = "#000000";
+    } else if (pst >= 50) {
+        ptr = "D";
+        pts = "Average";
+        ptbg = "#fad643";
+        ptc = "#000000";
+    } else if (pst >= 40) {
+        ptr = "E";
+        pts = "Below Average";
+        ptbg = "#ffe169";
+        ptc = "#000000";
+    } else {
+        ptr = "U";
+        pts = "Unsatisfactory";
+        ptbg = "#5c0000";
+        ptc = "#ffffff";
+    }
+    
+    // Computer Science Grading
+    
+    let cpr;
+    let cps;
+    let cpbg;
+    let cpc;
+    
+    if (cmp > 100) {
+        cpr = "ERROR!";
+        cps = "ERROR!";
+        cpbg = "#f00000";
+        cpc = "#ffffff";
+    } else if (cmp >= 95) {
+        cpr = "A++";
+        cps = "Exceptional";
+        cpbg = "#143601";
+        cpc = "#ffffff";
+    } else if (cmp >= 90) {
+        cpr = "A+";
+        cps = "Outstanding";
+        cpbg = "#1a4301";
+        cpc = "#ffffff";
+    } else if (cmp >= 85) {
+        cpr = "A";
+        cps = "Excellent";
+        cpbg = "#245501";
+        cpc = "#ffffff";
+    } else if (cmp >= 80) {
+        cpr = "B++";
+        cps = "Very Good";
+        cpbg = "#538d22";
+        cpc = "#ffffff";
+    } else if (cmp >= 75) {
+        cpr = "B+";
+        cps = "Good";
+        cpbg = "#73a942";
+        cpc = "#000000";
+    } else if (cmp >= 70) {
+        cpr = "B";
+        cps = "Fairly Good";
+        cpbg = "#aad576";
+        cpc = "#000000";
+    } else if (cmp >= 60) {
+        cpr = "C";
+        cps = "Above Average";
+        cpbg = "#edc531";
+        cpc = "#000000";
+    } else if (cmp >= 50) {
+        cpr = "D";
+        cps = "Average";
+        cpbg = "#fad643";
+        cpc = "#000000";
+    } else if (cmp >= 40) {
+        cpr = "E";
+        cps = "Below Average";
+        cpbg = "#ffe169";
+        cpc = "#000000";
+    } else {
+        cpr = "U";
+        cps = "Unsatisfactory";
+        cpbg = "#5c0000";
+        cpc = "#ffffff";
+    }
+    
+    // --- Overall Percentage & Grade Calculation ---
+    
+    let obt = phy + mth + eng + urd + pst + cmp;
+    let per = ((obt / 600) * 100).toFixed(2);
+    
+    let grade;
+    let stats;
+    let statusColor;
+    let color;
+    
+    if (per > 100) {
+        grade = "ERROR!";
+        stats = "ERROR!";
+        statusColor = "#f00000";
+        color = "#ffffff";
+    } else if (per >= 95) {
+        grade = "A++";
+        stats = "Exceptional";
+        statusColor = "#143601";
+        color = "#ffffff";
+    } else if (per >= 90) {
+        grade = "A+";
+        stats = "Outstanding";
+        statusColor = "#1a4301";
+        color = "#ffffff";
+    } else if (per >= 85) {
+        grade = "A";
+        stats = "Excellent";
+        statusColor = "#245501";
+        color = "#ffffff";
+    } else if (per >= 80) {
+        grade = "B++";
+        stats = "Very Good";
+        statusColor = "#538d22";
+        color = "#ffffff";
+    } else if (per >= 75) {
+        grade = "B+";
+        stats = "Good";
+        statusColor = "#73a942";
+        color = "#000000";
+    } else if (per >= 70) {
+        grade = "B";
+        stats = "Fairly Good";
+        statusColor = "#aad576";
+        color = "#000000";
+    } else if (per >= 60) {
+        grade = "C";
+        stats = "Above Average";
+        statusColor = "#edc531";
+        color = "#000000";
+    } else if (per >= 50) {
+        grade = "D";
+        stats = "Average";
+        statusColor = "#fad643";
+        color = "#000000";
+    } else if (per >= 40) {
+        grade = "E";
+        stats = "Below Average";
+        statusColor = "#ffe169";
+        color= "#000000";
+    } else {
+        grade = "U";
+        stats = "Unsatisfactory";
+        statusColor = "#5c0000";
+        color = "#ffffff";
+    }
+    
+    // --- HTML Output Generation ---
+    
+    document.writeln(`
+        <div class="card border-0 shadow-sm rounded-4 p-4 w-100">
+            <div class="text-center mb-4">
+                <h3 class="fw-bold mb-2 text-dark">SOS Technical Training Institute</h3>
+                <h6 class="text-primary fw-semibold">Student Result Sheet</h6>
+            </div>
+            <div class="text-center mb-4">
+                <div class="mb-1">
+                    <strong>Student Name: </strong><span>${nam}</span>
+                </div>
+                <div class="mb-1">
+                    <strong>Father's Name: </strong><span>${fname}</span>
+                </div>
+                <div class="mb-1">
+                    <strong>Roll No: </strong><span>${rollNo}</span>
+                </div>
+                <div class="mb-1">
+                    <strong>Class: </strong><span>${clas}</span>
+                </div>
+            </div>
+            <div class="mb-4">            
+                <table class="table table-bordered text-center mb-0">
+                    <tr class="table-primary">
+                        <th class="w-25">Subjects</th>
+                        <th class="w-25">Marks</th>
+                        <th class="w-25">Grade</th>
+                        <th class="w-25">Status</th>
+                    </tr>
+                    <tr>
+                        <td>Physics</td>
+                        <td>${phy}</td>
+                        <td style="background-color: ${pybg}; color: ${pyc}; font-weight: bolder; padding: 4px 10px; border-radius: 4px;">${pyr}</td>
+                        <td style="background-color: ${pybg}; color: ${pyc}; font-weight: bolder; padding: 4px 10px; border-radius: 4px;">${pys}</td>
+                    </tr>
+                    <tr>
+                        <td>Maths</td>
+                        <td>${mth}</td>
+                        <td style="background-color: ${mhbg}; color: ${mhc}; font-weight: bolder; padding: 4px 10px; border-radius: 4px;">${mhr}</td>
+                        <td style="background-color: ${mhbg}; color: ${mhc}; font-weight: bolder; padding: 4px 10px; border-radius: 4px;">${mhs}</td>
+                    </tr>
+                    <tr>
+                        <td>English</td>
+                        <td>${eng}</td>
+                        <td style="background-color: ${egbg}; color: ${egc}; font-weight: bolder; padding: 4px 10px; border-radius: 4px;">${egr}</td>
+                        <td style="background-color: ${egbg}; color: ${egc}; font-weight: bolder; padding: 4px 10px; border-radius: 4px;">${egs}</td>
+                    </tr>
+                    <tr>
+                        <td>Urdu</td>
+                        <td>${urd}</td>
+                        <td style="background-color: ${udbg}; color: ${udc}; font-weight: bolder; padding: 4px 10px; border-radius: 4px;">${udr}</td>
+                        <td style="background-color: ${udbg}; color: ${udc}; font-weight: bolder; padding: 4px 10px; border-radius: 4px;">${uds}</td>
+                    </tr>
+                    <tr>
+                        <td>Pakistan Studies</td>
+                        <td>${pst}</td>
+                        <td style="background-color: ${ptbg}; color: ${ptc}; font-weight: bolder; padding: 4px 10px; border-radius: 4px;">${ptr}</td>
+                        <td style="background-color: ${ptbg}; color: ${ptc}; font-weight: bolder; padding: 4px 10px; border-radius: 4px;">${pts}</td>
+                    </tr>
+                    <tr>
+                        <td>Computer Science</td>
+                        <td>${cmp}</td>
+                        <td style="background-color: ${cpbg}; color: ${cpc}; font-weight: bolder; padding: 4px 10px; border-radius: 4px;">${cpr}</td>
+                        <td style="background-color: ${cpbg}; color: ${cpc}; font-weight: bolder; padding: 4px 10px; border-radius: 4px;">${cps}</td>
+                    </tr>                
+                </table> 
+            </div>
+            <div class="text-center mb-4">
+                <p><strong class="mb-1">Total Marks: </strong>600</p>
+                <p><strong class="mb-1">Obtained Marks: </strong>${obt}</p>
+                <p><strong class="mb-1">Percentage: </strong>${per}%</p>
+                <p><strong class="mb-1">Grade: </strong><span style="background-color: ${statusColor}; color: ${color}; font-weight: bold; padding: 4px 10px; border-radius: 4px;">${grade}</span></p>
+                <p><strong class="mb-0">Status: </strong><span style="background-color: ${statusColor}; color: ${color}; font-weight: bolder; padding: 4px 10px; border-radius: 4px;">${stats}</span></p>
+            </div>
+            <div class="text-center mb-4">
+                <button class="btn btn-primary px-4 py-2">Print Result</button> 
+            </div>
+            <div class="text-center mb-4">
+                <p class="text-center text-muted" style="font-size: 12px;">Design by "Anas"</p>
+            </div> 
+        </div>
+    `);
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>
